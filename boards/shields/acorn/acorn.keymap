@@ -38,6 +38,18 @@
             hold-while-undecided-linger;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 36 37 38>;
         };
+
+        TCB: TCB {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TCB";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <37 40>;
+        };
     };
 
     keymap {
@@ -54,10 +66,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W            &kp E                &kp R          &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &HML LEFT_ALT S  &HML LEFT_CONTROL D  &HML LSHIFT F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X            &kp C                &kp V          &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                                   &kp LGUI             &mo 1          &kp SPACE    &kp RET  &mo 2  &kp LALT
+&kp TAB    &kp Q            &kp W            &kp E                &kp R          &kp T        &kp Y    &kp U               &kp I         &kp O             &kp P                &kp BSPC
+&kp LCTRL  &HML LEFT_GUI A  &HML LEFT_ALT S  &HML LEFT_CONTROL D  &HML LSHIFT F  &kp G        &kp H    &HMR RIGHT_SHIFT J  &HMR RCTRL K  &HMR RIGHT_ALT L  &HMR RIGHT_GUI SEMI  &kp SQT
+&kp LSHFT  &kp Z            &kp X            &kp C                &kp V          &kp B        &kp N    &kp M               &kp COMMA     &kp DOT           &kp FSLH             &kp ESC
+                                             &kp LGUI             &TCB 1 SPACE   &kp SPACE    &kp RET  &TCB 2 BACKSPACE    &kp LALT
             >;
         };
 
