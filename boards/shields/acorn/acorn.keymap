@@ -47,9 +47,8 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
-            flavor = "tap-unless-interrupted";
+            flavor = "balanced";
             hold-trigger-key-positions = <37 40 36 38 39 41>;
-            hold-trigger-on-release;
         };
     };
 
@@ -67,10 +66,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q            &kp W            &kp E                &kp R          &kp T         &kp Y    &kp U               &kp I         &kp O             &kp P                &kp BSPC
-&kp LCTRL  &HML LEFT_GUI A  &HML LEFT_ALT S  &HML LEFT_CONTROL D  &HML LSHIFT F  &kp G         &kp H    &HMR RIGHT_SHIFT J  &HMR RCTRL K  &HMR RIGHT_ALT L  &HMR RIGHT_GUI SEMI  &kp SQT
-&kp LSHFT  &kp Z            &kp X            &kp C                &kp V          &kp B         &kp N    &kp M               &kp COMMA     &kp DOT           &kp FSLH             &kp ESC
-                                             &TCB 3 ESCAPE        &TCB 4 SPACE   &TCB 1 TAB    &kp RET  &TCB 1 BACKSPACE    &kp DELETE
+&kp TAB    &kp Q            &kp W            &kp E                &kp R          &kp T         &kp Y    &kp U               &kp I          &kp O             &kp P                &kp BSPC
+&kp LCTRL  &HML LEFT_GUI A  &HML LEFT_ALT S  &HML LEFT_CONTROL D  &HML LSHIFT F  &kp G         &kp H    &HMR RIGHT_SHIFT J  &HMR RCTRL K   &HMR RIGHT_ALT L  &HMR RIGHT_GUI SEMI  &kp SQT
+&kp LSHFT  &kp Z            &kp X            &kp C                &kp V          &kp B         &kp N    &kp M               &kp COMMA      &kp DOT           &kp FSLH             &kp ESC
+                                             &TCB 3 ESCAPE        &TCB 4 SPACE   &TCB 1 TAB    &kp RET  &TCB 1 BACKSPACE    &TCB 2 DELETE
             >;
         };
 
@@ -84,10 +83,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N7        &kp N8        &kp N9        &trans           &trans         &trans        &trans    &trans     &trans     &trans  &kp BSPC
-&bt BT_CLR  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans           &trans         &kp ASTERISK  &kp PLUS  &kp MINUS  &kp SLASH  &trans  &trans
-&kp LSHFT   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans           &bootloader    &trans        &trans    &trans     &trans     &trans  &bootloader
-                                        &kp LGUI      &kp KP_NUMBER_0  &kp SPACE      &kp RET       &trans    &kp LALT
+&kp TAB     &kp N7        &kp N8        &kp N9        &trans        &trans         &trans        &trans    &trans     &trans     &trans  &kp BSPC
+&bt BT_CLR  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans        &trans         &kp ASTERISK  &kp PLUS  &kp MINUS  &kp SLASH  &trans  &trans
+&kp LSHFT   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &bootloader    &trans        &trans    &trans     &trans     &trans  &bootloader
+                                        &kp LGUI      &kp NUMBER_0  &kp SPACE      &kp RET       &trans    &kp LALT
             >;
         };
 
