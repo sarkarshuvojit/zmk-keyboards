@@ -54,6 +54,7 @@
 
     keymap {
         compatible = "zmk,keymap";
+
         default_layer {
             display-name = "base";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -82,15 +83,15 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N7        &kp N8        &kp N9        &none  &none          &none         &none     &none      &none      &none  &kp BSPC
-&bt BT_CLR  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none  &none          &kp ASTERISK  &kp PLUS  &kp MINUS  &kp SLASH  &none  &none
-&kp LSHFT   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &bootloader    &none         &none     &none      &none      &none  &bootloader
-                                             &TCB 3 ESCAPE        &TCB 4 SPACE   &TCB 1 TAB    &kp RET  &TCB 1 BACKSPACE    &TCB 2 DELETE
+&kp TAB     &none  &kp N7        &kp N8         &kp N9           &none          &none         &none             &none          &none      &none  &kp BSPC
+&bt BT_CLR  &none  &kp NUMBER_4  &kp N5         &kp NUMBER_6     &none          &kp ASTERISK  &kp PLUS          &kp MINUS      &kp SLASH  &none  &none
+&kp LSHFT   &none  &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3     &bootloader    &none         &none             &none          &none      &none  &bootloader
+                                 &TCB 3 ESCAPE  &TCB 4 NUMBER_0  &TCB 1 TAB     &kp RET       &TCB 1 BACKSPACE  &TCB 2 DELETE
             >;
         };
 
         symbol {
-            display-name = "raise";
+            display-name = "symbols";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
@@ -102,34 +103,34 @@
 &kp TAB    &kp EXCL  &kp AT            &kp HASH        &kp DLLR              &kp PRCNT         &kp CARET  &kp AMPS               &kp ASTRK        &kp LPAR  &kp RPAR  &kp BSPC
 &kp LCTRL  &trans    &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp UNDERSCORE    &kp MINUS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT  &kp BSLH  &kp GRAVE
 &kp LSHFT  &trans    &trans            &trans          &trans                &trans            &kp UNDER  &kp PLUS               &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                                             &TCB 3 ESCAPE        &TCB 4 SPACE   &TCB 1 TAB    &kp RET  &TCB 1 BACKSPACE    &TCB 2 DELETE
+                                       &TCB 3 ESCAPE   &TCB 4 SPACE          &TCB 1 TAB        &kp RET    &TCB 1 BACKSPACE       &TCB 2 DELETE
             >;
         };
 
         media {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none    &none           &none            &none              &none       &none  &none
-&none       &none         &none         &none         &none  &none    &kp C_PREVIOUS  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp C_NEXT  &none  &none
-&none       &none         &none         &none         &none  &none    &none           &none            &none              &none       &none  &none
-                                             &TCB 3 ESCAPE        &TCB 4 SPACE   &TCB 1 TAB    &kp RET  &TCB 1 BACKSPACE    &TCB 2 DELETE
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &none         &none         &none           &none             &none              &none       &none  &none
+&none       &none         &none         &none          &none         &none         &kp C_PREVIOUS  &kp C_VOLUME_UP   &kp C_VOLUME_DOWN  &kp C_NEXT  &none  &none
+&none       &none         &none         &none          &none         &none         &none           &none             &none              &none       &none  &none
+                                        &TCB 3 ESCAPE  &TCB 4 SPACE  &TCB 1 TAB    &kp RET         &TCB 1 BACKSPACE  &TCB 2 DELETE
             >;
         };
 
         navigation {
             bindings = <
-&none  &none  &none     &none          &none        &none      &none     &none     &none         &none      &none  &none
-&none  &none  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &none  &none
-&none  &none  &none     &none          &none        &none      &none     &none     &none         &none      &none  &none
-                                             &TCB 3 ESCAPE        &TCB 4 SPACE   &TCB 1 TAB    &kp RET  &TCB 1 BACKSPACE    &TCB 2 DELETE
+&none  &none  &none     &none          &none         &none         &none     &none             &none          &none      &none  &none
+&none  &none  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END       &kp LEFT  &kp DOWN          &kp UP_ARROW   &kp RIGHT  &none  &none
+&none  &none  &none     &none          &none         &none         &none     &none             &none          &none      &none  &none
+                        &TCB 3 ESCAPE  &TCB 4 SPACE  &TCB 1 TAB    &kp RET   &TCB 1 BACKSPACE  &TCB 2 DELETE
             >;
         };
 
         fun {
             bindings = <
-&none  &kp F7  &kp F8  &kp F9  &none  &none    &none  &none    &none    &none    &none  &none
-&none  &kp F4  &kp F5  &kp F6  &none  &none    &none  &none    &none    &none    &none  &none
-&none  &kp F1  &kp F2  &kp F3  &none  &none    &none  &kp F10  &kp F11  &kp F12  &none  &none
-                                             &TCB 3 ESCAPE        &TCB 4 SPACE   &TCB 1 TAB    &kp RET  &TCB 1 BACKSPACE    &TCB 2 DELETE
+&none  &kp F7  &kp F8  &kp F9         &none         &none         &none    &none             &none          &none    &none  &none
+&none  &kp F4  &kp F5  &kp F6         &none         &none         &none    &none             &none          &none    &none  &none
+&none  &kp F1  &kp F2  &kp F3         &none         &none         &none    &kp F10           &kp F11        &kp F12  &none  &none
+                       &TCB 3 ESCAPE  &TCB 4 SPACE  &TCB 1 TAB    &kp RET  &TCB 1 BACKSPACE  &TCB 2 DELETE
             >;
         };
     };
