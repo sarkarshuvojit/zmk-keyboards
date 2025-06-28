@@ -45,7 +45,7 @@
 &kp TAB    &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O       &kp P          &kp BSPC
 &kp LCTRL  &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G        &kp H      &hm RSHFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI  &kp SQT
 &kp LSHFT  &kp Z       &kp X       &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH       &bootloader
-                                   &lt 5 ESC    &lt 1 SPACE  &lt 2 TAB    &lt 4 RET  &lt 2 BSPC   &lt 3 DEL
+                                   &lt 5 ESC    &lt 1 SPACE  &kp TAB    &lt 4 RET  &lt 2 BSPC   &lt 3 DEL
             >;
         };
 
